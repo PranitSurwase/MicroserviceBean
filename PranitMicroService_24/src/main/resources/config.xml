@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+	<bean name="network"
+		class="com.example.PranitMicroService_24.beans.Network"></bean>
+	<!-- Constructor based -->
+	<bean name="phone"
+		class="com.example.PranitMicroService_24.beans.Phone">
+		<!-- <constructor-arg ref="network"></constructor-arg> -->
+		<!-- <constructor-arg value="123.23" type="double"></constructor-arg> <constructor-arg 
+			value="90" type="int"></constructor-arg> -->
+			
+		<!-- Setter Based -->
+		<property name="network" ref="network"></property>
+	</bean>
+
+</beans>
